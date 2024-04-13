@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      max-width: 600px;
+      margin-top: 50px;
+    }
+
+    h2 {
+      color: #007bff;
+    }
+
+    table {
+      background-color: #fff;
+      border: 1px solid #dee2e6;
+      margin-top: 20px;
+    }
+
+    label {
+      color: #495057;
+    }
+
+    .form-control {
+      border-radius: 0.25rem;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border: 1px solid #007bff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border: 1px solid #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" style="margin-top: 100px;">
+    <h2>Add Attendance</h2>
+  
+    <form>
+      <table class="table table-bordered">
+        <tr>
+          <td><label class="font-weight-bold">Name:</label></td>
+          <td><input class="form-control" type="text" [(ngModel)]="attendance.name" name="name" readonly>
+          </td>
+        </tr>
+        <tr>
+          <td><label class="font-weight-bold">Date:</label></td>
+          <td><input class="form-control" type="text" [(ngModel)]="attendance.date"  name="date"></td>
+        </tr>
+        
+        <tr>
+          <td><label class="font-weight-bold">Status:</label></td>
+          <td><input class="form-control" type="text" [(ngModel)]="attendance.status" name="status"></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="text-center">
+            <button class="btn btn-primary" (click)="saveAttendance()"   routerLink="/trainer/user-class">Save</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

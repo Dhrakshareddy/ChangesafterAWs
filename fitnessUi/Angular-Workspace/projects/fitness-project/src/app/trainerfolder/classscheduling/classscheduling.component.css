@@ -1,0 +1,91 @@
+.container {
+  width: 100%;
+  height: auto; 
+  overflow: hidden;
+  padding: 20px;
+}
+
+h2 {
+  color: rgb(124, 151, 198);
+}
+
+h3 {
+  color: rgb(140, 174, 232);
+}
+
+table {
+  margin-left: 100px;
+  border-collapse: collapse;
+  width: 100%; 
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#add {
+  width: 100%;
+  margin-top: 120px; 
+  margin-left: 40px;
+
+}
+
+#save {
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  width: 70px;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+
+.two {
+  background-color: rgb(236, 19, 55);
+  color: white;
+  margin-left: 20px;
+  border-radius: 10px;
+  width: 70px;
+}
+
+.up {
+  background-color: rgb(96, 96, 192);
+  color: white;
+  margin-left: 20px;
+  width: 70px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.onad {
+  width: 100%; 
+}
+
+.edit {
+  background-color: rgb(133, 179, 234);
+  border-radius: 10px;
+  width: 70px;
+  color: white;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  width: 200px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}

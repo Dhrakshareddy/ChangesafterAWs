@@ -1,0 +1,59 @@
+<div class="con">
+  <div class="container mt-2">
+    <div class="row p-4 text-end ">
+      <div class=" d-flex justify-content-end ">
+        <h1>Membership List</h1>
+       
+      <div class="col-md-1  ">
+        <button class="add" routerLink="add">
+         +
+        </button>
+
+        </div>
+      </div>
+    <table class="table table-bordered  mt-4">
+      <thead class="table-dark" >
+        <tr>
+          <th>MembershipType</th>
+          <th>Description</th>
+        
+          <th>Period</th>
+          <th>Edit</th>
+          <th>Remove</th>
+         
+        </tr>
+      </thead>
+      <tbody class="tbody" >
+        <tr *ngFor="let membership of membership">
+          <td>{{ membership.membershipType }}</td>
+          <td>{{ membership.description }}</td>
+
+          <td>{{membership.period}}</td>
+         
+
+
+      
+          <td>
+             <div class="edit" routerLink="/admin/membership/edit/{{ membership.membershipId }}" >
+              <i class="fas fa-edit"></i>
+             </div>
+          </td>
+<td>
+          <div class="delete" *ngIf="membership.membershipId" (click)="deleteMembership(membership.membershipId )">
+            <i class="fa-solid fa-trash"></i>
+          </div>
+          </td>
+        </tr>
+       
+     
+      </tbody>
+    </table>
+  </div>
+  
+  </div>
+</div>
+
+  
+
+  
+

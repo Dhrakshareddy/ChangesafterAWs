@@ -1,0 +1,60 @@
+<div class="con">
+  <div class="container mt-2">
+    <div class="row p-4 text-end ">
+      <div class=" d-flex justify-content-end ">
+        <h1>Equipment List</h1>
+
+        <div class="col-md-1  ">
+          <button class="add" routerLink="add">
+            +
+          </button>
+
+        </div>
+      </div>
+      <table class="table table-bordered  mt-4">
+        <thead class="table-dark">
+          <tr>
+            <th>Equipment Name</th>
+            <th>Brand</th>
+
+            <th>Quantity</th>
+            <th>Purchase Date</th>
+            <th>Edit</th>
+            <th>Remove</th>
+
+          </tr>
+        </thead>
+        <tbody class="tbody">
+          <tr *ngFor="let equipment of equipment">
+            <td>{{ equipment.equipmentName}}</td>
+            <td>{{equipment.brand }}</td>
+
+            <td>{{ equipment.quantity}}</td>
+            <td>{{ equipment.purchaseDate}}</td>
+
+
+
+
+            <td>
+              <div class="edit" routerLink="/admin/equipment/edit/{{ equipment.equipmentId }}">
+                <i class="fas fa-edit"></i>
+              </div>
+            </td>
+            <td>
+              <div class="delete" *ngIf="equipment.equipmentId" (click)="deleteEquipment(equipment.equipmentId )">
+                <i class="fa-solid fa-trash"></i>
+              </div>
+            </td>
+
+
+
+
+          </tr>
+
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>

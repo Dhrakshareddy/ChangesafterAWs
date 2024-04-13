@@ -1,0 +1,53 @@
+<div class="con">
+  <div class="container mt-2">
+    <div class="row p-4 text-end ">
+      <div class=" d-flex justify-content-end ">
+        <h1>Doctor List</h1>
+
+        <div class="col-md-1  ">
+          <button class="add" routerLink="add">
+            +
+          </button>
+
+        </div>
+      </div>
+      <table class="table table-bordered  mt-4">
+        <thead class="table-dark">
+          <tr>
+            <th>Doctor Name</th>
+            <th>Specialization</th>
+
+            <th>Years Of Experience</th>
+            <th>Contact Number</th>
+            <th>Edit</th>
+            <th>Remove</th>
+
+          </tr>
+        </thead>
+        <tbody class="tbody">
+          <tr *ngFor="let doctor of doctors">
+            <td>{{ doctor.name }}</td>
+            <td>{{ doctor.specialization}}</td>
+
+            <td>{{ doctor.yearOfExperience }}</td>
+            <td>{{ doctor.contactNumber }}</td>
+            <td>
+              <div class="edit" routerLink="/doctors/edit/{{ doctor.doctorId }}">
+                <i class="fas fa-edit"></i>
+              </div>
+            </td>
+            <td>
+              <div class="delete" *ngIf="doctor.doctorId" (click)="deleteDoctor(doctor.doctorId)"><i
+                  class="fa-solid fa-trash"></i>
+
+              </div>
+            </td>
+          </tr>
+
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>

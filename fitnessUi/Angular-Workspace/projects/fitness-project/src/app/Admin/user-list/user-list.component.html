@@ -1,0 +1,65 @@
+<div class="con">
+  <div class="container mt-2">
+    <div class="row p-4 text-end ">
+      <div class=" d-flex justify-content-end ">
+        <h1>User List</h1>
+       
+      <div class="col-md-1  ">
+        <button class="add" routerLink="add">
+         +
+        </button>
+
+        </div>
+      </div>
+    <table class="table table-bordered  mt-4">
+      <thead class="table-dark" >
+        <tr>
+          <th>User Name</th>
+          <th>Date of Birth</th>
+        
+          <th>Email</th>
+          <th>Contact Number</th>
+          <th>Edit</th>
+          <th>Remove</th>
+         
+        </tr>
+      </thead>
+      <tbody class="tbody" >
+        <tr *ngFor="let user of users">
+          <td>{{ user.name }}</td>
+          <td>{{ user.dateOfBirth | date }}</td>
+         
+
+          <td>{{ user.email }}</td>
+          <td>{{ user.contactNumber }}</td>
+         
+
+          <td>
+            <div type="button" class="edit" routerLink="edit/{{ user.userId }}" >
+             <i class="fas fa-edit"></i>
+            </div>
+         </td>
+  <td>
+         <div class="delete" *ngIf="user.userId" (click)="deleteUser(user.userId)">
+           <i class="fa-solid fa-trash"></i>
+         </div>
+         </td>
+      
+        
+        </tr>
+       
+     
+      </tbody>
+    </table>
+  </div>
+  
+  </div>
+</div>
+
+  
+
+  
+
+
+    
+  

@@ -1,0 +1,74 @@
+[contenteditable="true"] {
+  border: 1px solid #ddd;
+  padding: 8px;
+  min-height: 30px;
+  outline: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+[contenteditable="true"]:hover {
+  border-color: black;
+
+}
+
+.tbody tr td {
+  text-align: center;
+  
+}
+
+.table-dark tr th {
+  text-align: center;
+  /* padding: 10px; */
+ 
+}
+
+.con {
+  position: absolute;
+  left: 0; /* Adjusted left position or you can remove it */
+  top: 140px;
+  margin-left: 200px;
+  /* width: 100%; */
+}
+
+.col-md-1 {
+  margin-left: 420px;
+}
+
+table {
+  max-width: 100%; /* Set max-width to ensure it doesn't exceed the container */
+}
+
+thead {
+  height: 40px;
+}
+
+h1 {
+  font-size: 40px;
+  position: absolute;
+  left: 30px;
+  top: -20px;
+}
+.add{
+  background-color:rgb(15, 145, 15);
+  font-size: 36px;
+  width: 50px;
+  border-radius: 7px;
+  color: white;
+  position: absolute;
+  left: 950px;
+  top: -10px;
+  /* border: 5px solid black; */
+  padding-top: 2px;
+  height: 50px;
+  border-style: none;
+  box-shadow: 4px 4px 10px black;
+}
+.delete{
+  color: red;
+  font-size: 20px;
+}
+.edit{
+  color: blueviolet;
+  font-size: 20px;
+}

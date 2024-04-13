@@ -1,0 +1,57 @@
+<div class="con">
+  <div class="container mt-2">
+    <div class="row p-4 text-end ">
+      <div class=" d-flex justify-content-end ">
+        <h1>Trainer List</h1>
+
+        <div class="col-md-1  ">
+          <button class="add" routerLink="add">
+            +
+          </button>
+
+        </div>
+      </div>
+      <table class="table table-bordered  mt-4">
+        <thead class="table-dark">
+          <tr>
+            <th>Trainer Name</th>
+            <th>Age</th>
+
+            <th>Years Of Experience</th>
+            <th>Contact Number</th>
+            <th>Edit</th>
+            <th>Remove</th>
+
+          </tr>
+        </thead>
+        <tbody class="tbody">
+          <tr *ngFor="let trainer of trainers">
+            <td>{{ trainer.name }}</td>
+            <td>{{ trainer.age }}</td>
+
+            <td>{{ trainer.yearOfExperience }}</td>
+            <td>{{ trainer.contactNumber }}</td>
+
+
+
+
+            <td>
+              <div type="button" class="edit" routerLink="edit/{{ trainer.trainerId }}">
+                <i class="fas fa-edit"></i>
+              </div>
+            </td>
+            <td>
+              <div class="delete" *ngIf="trainer.trainerId" (click)="deleteTrainer(trainer.trainerId)"><i
+                  class="fa-solid fa-trash"></i>
+
+              </div>
+            </td>
+          </tr>
+
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>

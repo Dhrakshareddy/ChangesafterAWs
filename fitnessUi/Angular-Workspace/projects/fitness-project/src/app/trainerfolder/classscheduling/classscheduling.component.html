@@ -1,0 +1,89 @@
+<div class="container">
+  <h2>Class Schedule</h2>
+  
+  <table>
+    <thead>
+      <tr>
+       <th>Name</th>
+        <th>Class Name</th>
+        <th>Date</th>
+        <th>Enrolled</th>
+        <th>Duration</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let class of classes">
+        <th>{{class.name}}</th>
+        <td>{{ class.className }}</td>
+        <td>{{ class.date }}</td>
+        <td>{{ class.enrolled }}</td>
+        <td>{{ class.duration }}</td>
+        <td>
+          <button  (click)="editClass(class)" class="edit">Edit</button>
+          <button class="two" (click)="deleteClass(class)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div *ngIf="isEditing" id="add">
+    <table class="onad">
+    <h3>Edit Class</h3>
+    <tr>
+      <td> <label>Name:</label></td>
+   <td> <input type="text"  *ngIf="editingClass" [(ngModel)]="editingClass.name" name="name"></td>
+    </tr>
+    <tr>
+      <td><label>Class Name:</label></td>
+      <td><input type="text" *ngIf="editingClass" [(ngModel)]="editingClass.className" name="className"></td>
+   </tr>
+  <tr>
+    <td><label>Date:</label></td>
+  <td> <input type="date" *ngIf="editingClass" [(ngModel)]="editingClass.date" name="date"></td> 
+  </tr>
+  <tr>
+   <td><label>Enrolled:</label></td> 
+    <td><input type="number" *ngIf="editingClass" [(ngModel)]="editingClass.enrolled" name="enrolled"></td>
+  </tr>
+  <tr>
+   <td><label>Duration:</label></td> 
+   <td><input type="text" *ngIf="editingClass" [(ngModel)]="editingClass.duration" name="duration"></td> 
+  </tr>
+    <button (click)="updateClass()" class="up">Update</button>
+  </table>
+  </div>
+  
+  <div *ngIf="!isEditing" id="add">
+  
+    
+    <table class="onad">
+      <h3>Add New Class</h3>
+      <tr>
+        <td> <label>Name:</label></td>
+     <td> <input type="text" [(ngModel)]="newClass.name" name="name"></td>
+      </tr>
+      <tr>
+
+  <td> <label>Class Name:</label></td> 
+   <td><input type="text" [(ngModel)]="newClass.className" name="className"></td> 
+  </tr>
+  <tr>
+   <td><label>Date:</label></td> 
+   <td><input type="text" [(ngModel)]="newClass.date" name="date"></td> 
+  
+  </tr>
+  <tr>
+   <td> <label>Enrolled:</label></td>
+  <td>  <input type="number" [(ngModel)]="newClass.enrolled" name="enrolled"></td>
+  </tr>
+  <tr>
+    <td><label>Duration:</label></td>
+   <td> <input type="text" [(ngModel)]="newClass.duration" name="duration"></td>
+  </tr>
+    <button id="save" (click)="saveClass()" routerLink="/trainer/user-class">Save</button>
+  
+   
+  </table>
+  </div>
+  </div>

@@ -1,0 +1,54 @@
+<div class="container">
+  <div>
+    <div>
+      <form [formGroup]="equipmentForm" (ngSubmit)="onSubmit()">
+        <h1>Equipment Registration</h1>
+        <table>
+          <tr>
+            <td><label for="equipmentName">Equipment Name:</label></td>
+            <td>
+              <input type="text" placeholder="Enter equipment name" formControlName="equipmentName">
+
+            </td>
+          </tr>
+          <tr>
+            <td><label for="description">description:</label></td>
+            <td>
+              <input type="text" placeholder="Enter the description" formControlName="description">
+            </td>
+          </tr>
+          <tr>
+            <td><label for="brand">brand:</label></td>
+            <td>
+              <input type="text" placeholder="Enter the brand" formControlName="brand">
+            </td>
+          </tr>
+          <tr>
+            <td><label for="purchaseDate">purchaseDate:</label></td>
+            <td>
+              <input type="date" placeholder="Enter the purchaseDate" formControlName="purchaseDate">
+            </td>
+          </tr>
+
+
+          <tr>
+            <td><label for="quantity">quantity:</label></td>
+            <td>
+              <input type="number" placeholder="Enter the quantity" formControlName="quantity">
+            </td>
+          </tr>
+
+
+          <tr>
+            <td><input class="reset" type="update" (click)="update()" value="update"></td>
+
+
+            <td><input class="submit" type="submit" value="Add"></td>
+          </tr>
+
+        </table>
+
+      </form>
+    </div>
+  </div>
+</div>

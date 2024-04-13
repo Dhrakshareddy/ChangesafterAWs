@@ -1,0 +1,26 @@
+<div class="container">
+  <div>
+      <div>
+          <form class="form" action="" method="post">
+              <h1>Progress</h1>
+              <tr>
+                <td><label>Username</label></td>
+                <td><input type="text"  [(ngModel)]="progress.username" name=name readonly></td>
+            </tr>
+              <tr>
+
+                  <td><label>Date</label></td>
+                  <td><input type="text"  [(ngModel)]="progress.progressDate" name=progressDate></td>
+              </tr>
+              <tr>
+                  <td><label>Calculated Progress</label></td>
+                  <td><input type="text" [(ngModel)]="progress.calculateProgress" name=calculateProgress></td>
+              </tr>
+              <tr>
+                  <td><input class="reset" type="reset"></td>
+                  <td><input class="submit" type="submit" value="Submit" routerLink="/trainer/user" (click)="saveProgress()"></td>
+              </tr>
+          </form> 
+      </div>
+  </div>
+</div>
